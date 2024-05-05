@@ -109,5 +109,32 @@
             <button type="submit">Login</button>
         </form>
     </div>
+    <script>
+        function showAdminLogin() {
+            var adminLogin = document.getElementById('adminLogin');
+            adminLogin.style.display = adminLogin.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // JavaScript code to handle form submission
+        document.getElementById('parkingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get form values
+            var ownerName = document.getElementById('ownerName').value;
+            var carModel = document.getElementById('carModel').value;
+            var carNumber = document.getElementById('carNumber').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+
+            // Display a confirmation message
+            var confirmationMessage = 'Thank you, ' + ownerName + '! Your car (' + carModel + ', ' + carNumber + ') has been parked. We will contact you at ' + phoneNumber + '.';
+            alert(confirmationMessage);
+
+            // Clear the form fields
+            document.getElementById('ownerName').value = '';
+            document.getElementById('carModel').value = '';
+            document.getElementById('carNumber').value = '';
+            document.getElementById('phoneNumber').value = '';
+        });
+    </script>
 </body>
 </html>
