@@ -6,7 +6,7 @@ def create_connection():
     connection = None
     try:
         connection = psycopg2.connect(
-            database="Project",
+            database="car",
             user="postgres",
             password="Taha5253",
             host="localhost",
